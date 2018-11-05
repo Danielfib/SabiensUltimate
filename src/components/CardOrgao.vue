@@ -1,9 +1,12 @@
 <template>
   <div class="containerr">
-    <a :href="insta">
+    <a :href="destino" >
       <div class="card z-depth-0">
         <img class="imagem" :src="image" alt="Imagen da loja">
-        <h3>hello</h3>
+        <div>
+          <h3>{{nome}}</h3>
+          <p> clique aqui para ver mais</p>
+        </div>
       </div>
     </a>
   </div>
@@ -13,7 +16,7 @@
 
   export default {
     name: "CardOrgao",
-    props: ['store','category','image','fotos','insta'],
+    props: ['nome','image','destino'],
     // data() {
     //   return {
     //     store: "Ben & Jerry",
@@ -39,7 +42,7 @@
 .card{
   display: flex;
   background-color: transparent;
-  width: 90%;
+  width: 23em;
   height: 10em;
   margin-left: 0.5em;
   margin-top: 1em;
@@ -65,22 +68,24 @@
   text-align: justify;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 1em;
-  white-space: pre-line;
+  margin-top: 0.5em;
+  margin-left: 0.7em;
+  margin-right: 1em;
+  /* white-space: pre-line; */
   color: #243539;
   font-family: AvenirNext;
-  font-weight: 600;
-  opacity: 0.36;
+  font-weight: 500;
+  opacity: 0.46;
 }
 
 .card h3 {
-  font-size: 1.3em;
+  font-size: 1.8em;
   text-align: justify;
   margin-top: 0;
   margin-bottom: 0;
   white-space: pre-line;
   margin-left: 0.5em;
-  /* margin-right: 0.7em; */
+  margin-top: 0.2em;
   color: #243539;
   font-family: AvenirNext;
   font-weight: 600;

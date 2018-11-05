@@ -13,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: "/",
+      path: "/galeria",
       name: "Galeria",
       component: Galeria
     }
