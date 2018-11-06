@@ -14,6 +14,22 @@
     <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Urinário', arrays: getUrinario, link:'https://nuneshere.github.io/sabiens/sistemaUrinario.html'} }">
         <CardOrgao nome="Sistema Urinário"  image="https://nuneshere.github.io/sabiens/Imagens/sistemaUrinario.jpg" > </CardOrgao>
     </router-link>
+
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Auditivo', arrays: arrAudi } }">
+        <CardOrgao nome="Sistema Auditivo"  image="https://1.bp.blogspot.com/-cD2COFd2-hM/WW1kyY3IYMI/AAAAAAAAGAA/kT7dFH0eZ9QPSAOTszOQJpRy-gJFbTVEACLcBGAs/s1600/Figura%2B1.jpg" > </CardOrgao>
+    </router-link>
+
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Cardiovascular', arrays: arrCardio, link: 'https://nuneshere.github.io/sabiens/SistemaCirculatorio.html' } }">
+        <CardOrgao nome="Sistema Cardiovascular"  image="https://www.nursing.com.br/wp-content/uploads/2018/07/sistema-cardiovascular-1-1.jpg" > </CardOrgao>
+    </router-link>
+
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Digestivo', arrays: arrDigest, link:  'https://nuneshere.github.io/sabiens/SistemaDigestorio.html' } }">
+        <CardOrgao nome="Sistema Digestivo"  image="https://1.bp.blogspot.com/-hBbigllr7Ak/V4ZwGGiTgeI/AAAAAAAAAE8/LKCg4HaelSQxoPq-lfkl8ggiboXTRNByQCLcB/s640/sistema-digestivo.jpg" > </CardOrgao>
+    </router-link>
+
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Locomotor', arrays: arrLoc, link: 'https://nuneshere.github.io/sabiens/SistemaLocomotor.html'} }">
+        <CardOrgao nome="Sistema Locomotor"  image="https://3.bp.blogspot.com/-oFUD7WxPZGw/WorcT04mYEI/AAAAAAAAo9g/JzaJlBWwSqYTgGZJaOjseDf5gKe4C6YtACLcBGAs/s1600/El-aparato-locomotor-.jpg" > </CardOrgao>
+    </router-link>
    </div>
   </div>
 
@@ -23,6 +39,7 @@
   import VueGallery from 'vue-gallery';
   import CardOrgao from '../components/CardOrgao.vue'
   import {arrayNervoso,arrayReprodutor,arrayRespiratorio,arrayUrinario} from '../assets/imagens.js'
+  import {arrAuditivo, arrCardiovascular, arrDigestivo, arrLocomotor} from '../assets/imagens.js'
 
   export default {
     data: function () {
@@ -56,8 +73,19 @@
         getUrinario: function () {
         // `this` points to the vm instance
             return arrayUrinario
-        }
-
+        },
+        arrAudi: function () {
+          return arrAuditivo
+        },
+        arrCardio: function () {
+          return arrCardiovascular
+        },
+        arrDigest: function () {
+          return arrDigestivo
+        },
+        arrLoc: function () {
+          return arrLocomotor
+        }, 
     },
 
     components: {
