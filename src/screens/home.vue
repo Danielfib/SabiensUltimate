@@ -2,10 +2,18 @@
   <div>
    <h2>Galeria de Sistemas </h2>
    <div class="col s6 containerr">
-    <router-link :to="{ name: 'Galeria', params: { hello: 'dale', arrays: array } }">
+    <router-link :to="{ name: 'Galeria', link:'', params: { hello: 'Sistema Nervoso', arrays: getNervoso } }">
+        <CardOrgao nome="Sistema Nervoso"  image="http://finantia-esm.com/wp-content/uploads/2016/05/sistema-nervoso-212x300.jpg" > </CardOrgao>
+    </router-link>
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Reprodutor', arrays: getReprodutor, link:'https://nuneshere.github.io/sabiens/sistemaGFem.html' } }">
         <CardOrgao nome="Sistema Reprodutor"  image="https://nuneshere.github.io/sabiens/Imagens/SistemaReprodutor.jpeg" > </CardOrgao>
     </router-link>
-    <CardOrgao nome="Sistema Reprodutor" image="https://nuneshere.github.io/sabiens/Imagens/SistemaReprodutor.jpeg" > </CardOrgao>
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Respiratorio', arrays: getRespiratorio } }">
+        <CardOrgao nome="Sistema Respiratorio"  image="https://i.ytimg.com/vi/1FSK3dyvoIc/hqdefault.jpg" > </CardOrgao>
+    </router-link>
+    <router-link :to="{ name: 'Galeria', params: { hello: 'Sistema Urinário', arrays: getUrinario, link:'https://nuneshere.github.io/sabiens/sistemaUrinario.html'} }">
+        <CardOrgao nome="Sistema Urinário"  image="https://nuneshere.github.io/sabiens/Imagens/sistemaUrinario.jpg" > </CardOrgao>
+    </router-link>
    </div>
   </div>
 
@@ -14,7 +22,7 @@
 <script>
   import VueGallery from 'vue-gallery';
   import CardOrgao from '../components/CardOrgao.vue'
-  import {array1} from '../assets/imagens.js'
+  import {arrayNervoso,arrayReprodutor,arrayRespiratorio,arrayUrinario} from '../assets/imagens.js'
 
   export default {
     data: function () {
@@ -33,9 +41,21 @@
     },
      computed: {
     // a computed getter
-        array: function () {
+        getNervoso: function () {
         // `this` points to the vm instance
-            return array1
+            return arrayNervoso
+        },
+        getReprodutor: function () {
+        // `this` points to the vm instance
+            return arrayReprodutor
+        },
+        getRespiratorio: function () {
+        // `this` points to the vm instance
+            return arrayRespiratorio
+        },
+        getUrinario: function () {
+        // `this` points to the vm instance
+            return arrayUrinario
         }
 
     },
@@ -61,6 +81,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 1em;
+    justify-content: center;
   }
   h2{
     font-family: AvenirNext;
