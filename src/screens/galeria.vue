@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>Galeria: {{hello}} </h2>
-    <h2>url({{arrays}}</h2>
     <!-- <img :src="arrays[0]" /> -->
     <gallery :images="arrays" :index="index" @close="index = null"></gallery>
     <div
