@@ -51,7 +51,7 @@
         // ],
         index: null,
         duvida: '',
-        hrefWhats: 'https://wa.me/5581998350872'
+        hrefWhats: 'https://wa.me/558191381200'
       };
     },
     created() {
@@ -106,7 +106,7 @@
     font-family: AvenirNext;
     font-weight: 600;
     font-size: 1.0em;
-    margin-left: -9em;
+    margin-left: -2em;
   }
   .row{
     margin-top: 1em;
@@ -120,6 +120,7 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: -1em;
 
   }
   .subtitle{
@@ -128,10 +129,12 @@
     background-color: #ebebeb;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 2em;
   }
   .enviar{
     border-radius: 20em;
     margin-top: 2em;
+    margin-left: 2em;
     margin-right: 2em;
     color:white;
   }
