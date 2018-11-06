@@ -85,7 +85,7 @@
         },
         arrLoc: function () {
           return arrLocomotor
-        }, 
+        },
     },
 
     components: {
