@@ -42,7 +42,7 @@
 .card{
   display: flex;
   background-color: transparent;
-  width: 23em;
+  width: 30em;
   height: 10em;
   margin-left: 0.5em;
   margin-top: 1em;
